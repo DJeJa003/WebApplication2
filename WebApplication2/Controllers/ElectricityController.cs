@@ -33,7 +33,6 @@ namespace WebApplication2.Controllers
             }
             catch (HttpRequestException e)
             {
-                // Log error (e.Message) or handle accordingly
                 return StatusCode(500, "Virhe datan haussa: " + e.Message);
             }
         }
@@ -41,7 +40,6 @@ namespace WebApplication2.Controllers
 
         private async Task SendDataToOtherService(string content, string url)
         {
-            //var url = "http://localhost:7250/api/Prices/AddSpotPrice"; // Update with the actual URL of MicroserviceDB endpoint
             var stringContent = new StringContent(content, Encoding.UTF8, "application/json");
 
             try

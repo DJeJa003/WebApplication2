@@ -16,7 +16,7 @@ namespace WebApplication2
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("http://localhost:7250/api/Prices") // Update with the actual URL of WebApplication2
+                    builder => builder.WithOrigins("http://localhost:7250/Prices/GetAndSaveElectricityData")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod());
             });
